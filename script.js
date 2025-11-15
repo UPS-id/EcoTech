@@ -18,23 +18,28 @@
         ];
 
         // Initialize Swiper
-        const swiper = new Swiper('.projectSwiper', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 }
-  }
-});
+        $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        margin: 30,
+        dots: true,
+        loop: true,
+        center: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
 
         // Create floating particles
         function createParticles() {
