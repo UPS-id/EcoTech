@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTech Digital - Digital Innovation for a Sustainable Nature</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+
+</head>
+<body class="preload">
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="leaf-spinner">
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+            </div>
+            <p class="text-green-400 text-lg uppercase tracking-wider">Growing Digital Solutions...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-leaf text-white"></i>
+                    </div>
+                    <span class="text- 2xl font-bold font-orbitron">
+                        <span class="text-green-400">ECO</span><span class="text-gray-400">TECH</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="#dashboard" class="nav-link text-gray-300 hover:text-white">Dashboard</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 w-64 h-full bg-gray-900 md:hidden mt-16">
+                <div class="p-6 space-y-4">
+                    <a href="#home" class="block text-gray-300 hover:text-white py-2">Home</a>
+                    <a href="#about" class="block text-gray-300 hover:text-white py-2">About</a>
+                    <a href="#projects" class="block text-gray-300 hover:text-white py-2">Projects</a>
+                    <a href="#dashboard" class="block text-gray-300 hover:text-white py-2">Dashboard</a>
+                    <a href="#skills" class="block text-gray-300 hover:text-white py-2">Skills</a>
+                    <a href="#contact" class="block text-gray-300 hover:text-white py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative">
+        <div class="hero-bg"></div>
+        <!-- Floating Particles -->
+        <div id="particles"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Digital Innovation
+                    </span>
+                    <br>
+                    <span class="text-gray-300">For a Sustainable Nature</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                    Transforming environmental challenges into digital solutions through cutting-edge technology and sustainable practices.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="btn-eco px-8 py-4 rounded-full text-white font-semibold inline-block">
+                        <i class="fas fa-rocket mr-2"></i> Explore Projects
+                    </a>
+                    <a href="#contact" class="px-8 py-4 rounded-full border-2 border-green-500 text-green-400 font-semibold hover:bg-green-500 hover:text-white transition-all inline-block">
+                        <i class="fas fa-envelope mr-2"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Our Philosophy
+                    </span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Every project is a leaf in the forest of innovation
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="eco-card p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-seedling text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sustainability</h3>
+                    <p class="text-gray-400">
+                        Membangun solusi digital yang dapat mengurangi dampak lingkungan sekaligus meningkatkan efisiensi bagi generasi mendatang.
+                    </p>
+                </div>
+
+                <div class="eco-card p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-microscope text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Innovation</h3>
+                    <p class="text-gray-400">
+                        Mengembangkan teknologi terbaru yang mendukung kemajuan digital dengan upaya pelestarian lingkungan.
+                    </p>
+                </div>
+
+                <div class="eco-card p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-globe text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Global Impact</h3>
+                    <p class="text-gray-400">
+                        Menerapkan solusi berskala besar yang mampu menangani tantangan lingkungan di tingkat global.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Swiper -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Featured Projects
+                    </span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Showcasing our latest environmental tech innovations
+                </p>
+            </div>
+
+            <div class="swiper projectSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Project 1 -->
+                    <div class="swiper-slide">
+                        <div class="project-card eco-card rounded-xl p-6">
+                            <div class="mb-4">
+                                <img src="https://c.pxhere.com/photos/bb/a1/nature_leaf_deciduous_forest_autumn_motive-1130660.jpg!d" alt="Forest Monitoring" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="text-green-400 text-sm font-semibold mb-2">AI & Satellite</div>
+                            <h3 class="text-2xl font-bold mb-3">Forest Monitoring</h3>
+                            <p class="text-gray-400 mb-4">
+                                Advanced satellite imagery and AI system for real-time forest health monitoring and illegal deforestation detection.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">AI Vision</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Satellite</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Cloud</span>
+                            </div>
+                            <button class="btn-eco w-full py-3 rounded-lg text-white font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="swiper-slide">
+                        <div class="project-card eco-card rounded-xl p-6">
+                            <div class="mb-4">
+                                <img src="https://images.squarespace-cdn.com/content/v1/577234532994ca52eb5d3d47/1484984771352-4YYE5SN1I0HJ443JGFU5/Raja+Ampat-24.jpg" alt="Ocean Cleanup" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="text-green-400 text-sm font-semibold mb-2">Robotics & IoT</div>
+                            <h3 class="text-2xl font-bold mb-3">Ocean Cleanup</h3>
+                            <p class="text-gray-400 mb-4">
+                                Autonomous drone fleet system for ocean plastic collection and water quality monitoring with predictive analytics.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Robotics</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">IoT</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">ML</span>
+                            </div>
+                            <button class="btn-eco w-full py-3 rounded-lg text-white font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="swiper-slide">
+                        <div class="project-card eco-card rounded-xl p-6">
+                            <div class="mb-4">
+                                <img src="https://agribusinessedu.com/wp-content/uploads/2023/01/what-is-smart-agriculture-2023-01-16-244428.jpg" alt="Smart Agriculture" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="text-green-400 text-sm font-semibold mb-2">IoT & Analytics</div>
+                            <h3 class="text-2xl font-bold mb-3">Smart Agriculture</h3>
+                            <p class="text-gray-400 mb-4">
+                                Precision farming system using IoT sensors and AI to optimize water usage and crop yield while minimizing environmental impact.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">IoT</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Analytics</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Automation</span>
+                            </div>
+                            <button class="btn-eco w-full py-3 rounded-lg text-white font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="swiper-slide">
+                        <div class="project-card eco-card rounded-xl p-6">
+                            <div class="mb-4">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/10/14/56/smoke-716322_1280.jpg" alt="Carbon Tracking" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="text-green-400 text-sm font-semibold mb-2">Blockchain</div>
+                            <h3 class="text-2xl font-bold mb-3">Carbon Tracking</h3>
+                            <p class="text-gray-400 mb-4">
+                                Blockchain-based carbon credit platform enabling transparent tracking and trading of carbon offsets across industries.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Blockchain</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Web3</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm">Smart Contracts</span>
+                            </div>
+                            <button class="btn-eco w-full py-3 rounded-lg text-white font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Environmental Impact Dashboard
+                    </span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Real-time metrics on our sustainability initiatives
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="eco-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4">🌳</div>
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="text-gray-400 font-semibold">Trees Saved</div>
+                    <p class="text-gray-500 text-sm mt-2">Through digital transformation initiatives</p>
+                </div>
+
+                <div class="eco-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="text-gray-400 font-semibold">Energy Efficiency %</div>
+                    <p class="text-gray-500 text-sm mt-2">Improvement through smart grid solutions</p>
+                </div>
+
+                <div class="eco-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-4">💧</div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="text-gray-400 font-semibold">Water Conservation</div>
+                    <p class="text-gray-500 text-sm mt-2">Millions of gallons saved annually</p>
+                </div>
+
+                <div class="eco-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-4">🏭</div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="text-gray-400 font-semibold">Carbon Offset (tons)</div>
+                    <p class="text-gray-500 text-sm mt-2">Annual reduction in carbon footprint</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Environmental Analytics
+                    </span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Data-driven insights for sustainable decision making
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="eco-card p-6 rounded-xl" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-4">📈 Monthly Environmental Impact</h3>
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="eco-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4">📊 Sustainability Growth</h3>
+                    <div class="chart-container">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Sustainable Tech Arsenal
+                    </span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Mastery of cutting-edge green technologies
+                </p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button class="skill-tab px-6 py-3 rounded-full bg-green-500 text-white font-semibold" data-category="all">All Skills</button>
+                <button class="skill-tab px-6 py-3 rounded-full bg-gray-700 text-gray-300 font-semibold hover:bg-gray-600" data-category="renewable">Renewable Energy</button>
+                <button class="skill-tab px-6 py-3 rounded-full bg-gray-700 text-gray-300 font-semibold hover:bg-gray-600" data-category="iot">IoT & Sensors</button>
+                <button class="skill-tab px-6 py-3 rounded-full bg-gray-700 text-gray-300 font-semibold hover:bg-gray-600" data-category="ai">AI & Analytics</button>
+            </div>
+
+            <!-- Skills Grid -->
+            <div id="skillsGrid" class="flex flex-wrap justify-center" data-aos="fade-up">
+                <!-- Skills will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-orbitron">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Connect With Us
+                    </span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Ready to make a difference together? Let's connect.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <div class="space-y-6">
+                        <a href="https://maps.app.goo.gl/wND3UMkoGWwCUryy9" target="_blank" class="eco-card p-6 rounded-xl flex items-center space-x-4 group">
+                            <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-green-500 group-hover:bg-opacity-30 transition-all">
+                                <i class="fas fa-map-marker-alt text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-400">Pamijahan, Bogor, Indonesia</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:ecotech@devforge.io" class="eco-card p-6 rounded-xl flex items-center space-x-4 group">
+                            <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-green-500 group-hover:bg-opacity-30 transition-all">
+                                <i class="fas fa-envelope text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-400">ecotech@devforge.io</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+15551234567" class="eco-card p-6 rounded-xl flex items-center space-x-4 group">
+                            <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-green-500 group-hover:bg-opacity-30 transition-all">
+                                <i class="fas fa-phone text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-400">+1 (555) 123-4567</p>
+                            </div>
+                        </a>
+
+                        <a href="https://calendly.com" target="_blank" class="eco-card p-6 rounded-xl flex items-center space-x-4 group">
+                            <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-green-500 group-hover:bg-opacity-30 transition-all">
+                                <i class="fas fa-calendar text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Schedule Meeting</h4>
+                                <p class="text-gray-400">Book a consultation</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <form id="contactForm" class="eco-card p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label class="block text-gray-400 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="Your Name">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-400 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="your@email.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="Subject">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-400 mb-2">Message</label>
+                            <textarea id="message" name="message" required rows="4" class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-eco w-full py-3 rounded-lg text-white font-semibold">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-leaf text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-orbitron">
+                            <span class="text-green-400">ECO</span><span class="text-gray-400">TECH</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Transforming environmental challenges into digital solutions through technology and sustainability.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Green Tech Solutions</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Environmental Analytics</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Sustainable IoT</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Carbon Tracking</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">About Us</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Our Mission</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Careers</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Press Kit</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Documentation</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">API Reference</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Blog</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-green-400">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">© 2025 DevForge. All rights reserved. | Designed for a sustainable future</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
