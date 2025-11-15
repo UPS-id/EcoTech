@@ -18,28 +18,27 @@
         ];
 
         // Initialize Swiper
-        $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        margin: 30,
-        dots: true,
-        loop: true,
-        center: true,
-        responsive: {
-            0: {
-                items: 1
+        const swiper = new Swiper('.projectSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-            576: {
-                items: 1
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            768: {
-                items: 2
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
             },
-            992: {
-                items: 3
-            }
-        }
-    });
+        });
 
         // Create floating particles
         function createParticles() {
